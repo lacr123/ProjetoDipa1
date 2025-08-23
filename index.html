@@ -1,162 +1,20 @@
-<?PHP
-// +---------------------------------------------------------+
-// | Página de entrada - Nivel 2B                            |
-// +---------------------------------------------------------+
-// | SCC - Controle de Correspondencias                      |
-// | Autor: Luiz A C Rocha - 06/2017                         |
-// +---------------------------------------------------------+
-SESSION_START();
-
-if ($_SESSION['cod_nivel'] != 1 and $_SESSION['cod_nivel'] != 2 and $_SESSION['cod_nivel'] != 3) {
-	SESSION_DESTROY();
-	$host = $_SERVER['REQUEST_METHOD'];
-	if ($host == 'GET') {
-    		header("Location: /web/index.php");
-	}
-}
-
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>SCC Controle de Correspondências</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-		<div id="page-wrapper">
-
-
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li>
-							<a href="#">Compras</a>
-							<ul>
-								<li>
-								    <a href="#">Cadastros</a>
-									<ul>
-										<li><a href="../../scc/login2/login_inc_corresp1.php">Correspondências I</a></li>
-										<li><a href="../../scc/login3/login_inc_corresp1_1.php">Correspondências II</a></li>
-										<li><a href="../../scc/login_lote1.php">Lotes</a></li>
-										<li><a href="../../scc/login_remetente1.php">Remetentes</a></li>
-										<li><a href="../../scc/login_destinatario1.php">Destinatários</a></li>
-										<li><a href="../../scc/cad_usuario_grid_sis_gest.php">Usuários</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Consultas</a>
-									<ul>
-										<li><a href="../../scc/Consulta_Corresp1.php">Correspondências</a></li>
-										<li><a href="../../scc/Consulta_Corresp1_2.php">Correspondências por Período</a></li>
-									</ul>
-								</li>
-								<li><a href="../../scc/login4/login_rel_corresp1.php">Relatórios</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Malotes</a>
-							<ul>
-								<li>
-									<a href="#">Cadastros</a>
-									 <ul>
-										<li><a href="../../scc/scm/login1/login_inc_Ar2.php">Recebidos</a></li>
-										<li><a href="../../scc/scm/login2/login_inc_Ar1.php">Expedidos</a></li>
-										<li><a href="../../scc/scm/login3/login_Destinatario1.php">Destinatários - Malotes Recebidos</a></li>
-										<li><a href="../../scc/scm/login3/login_Remetente1.php">Remetentes - Malotes Expedidos</a></li>
-										<li><a href="../../scc/scm/cad_usuario_grid_sis_gest.php">Usuários</a></li>
-										<li><a href="../../scc/scm/cad_malote_grid_sis_gest.php">Malotes</a></li>
-									 </ul>
-								</li>
-								<li>
-									<a href="#">Consultas</a>
-									<ul>
-										<li><a href="../../scc/scm/Consulta_Ar3.php">Recebidos</a></li>
-										<li><a href="../../scc/scm/Consulta_Ar1.php">Expedidos</a></li>
-										<li><a href="../../scc/scm/Consulta_Ar1_1_1.php">Recebidos por Período</a></li>
-										<li><a href="../../scc/scm/Consulta_Ar1_1_2.php">Expedidos por Período</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Relatórios</a>
-									<ul>
-										<li><a href="../../scc/scm/login1/login_rel_mle2.php">Recebidos</a></li>
-										<li><a href="../../scc/scm/login1/login_rel_mle1.php">Expedidos</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Avisos de Recebimento</a>
-							<ul>
-								<li>
-     							    <a href="#">Cadastros</a>
-									<ul>
-										<li><a href="../../scc/sca/login1/login_inc_Ar1.php">ARs</a></li>
-										<li><a href="../../scc/sca/login_lote1.php">Lotes</a></li>
-										<li><a href="../../scc/sca/cad_usuario_grid_sis_gest.php">Usuários</a></li>
-									</ul>
-								</li>
-								<li>
-								    <a href="#">Consultas</a>
-									<ul>
-										<li><a href="../../scc/sca/Consulta_Ar1.php">ARs</a></li>
-										<li><a href="../../scc/sca/Consulta_Ar1_1_2.php">ARs por Período</a></li>
-									</ul>
-									<li><a href="../../scc/sca/login1/login_rel_Ar1.php">Relatórios</a></li>
-									</ul>
-						</li>
-					<li class="current"><a href="../web/index.php">Voltar</a></li>
-					</ul>
-				</nav>
-
-			<!-- Main -->
-			<!--	<section id="main">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div class="content">
-
-										<article class="box page-content">
-
-											<section>
-												<span class="image featured"><img src="images/star1.jpg" alt="" /></span>
-											</section>
-
-										</article>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			-->
-
-			<!--				<section id="main">
-					<div class="container">
-						<div class="row">
-								<div class="content">
-
-											<section>
-												<span class="image featured"><img src="images/star1.jpg" alt="" /></span>
-											</section>
-
-								</div>
-						</div>
-					</div>
-				</section>
-			-->
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo API</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Busca de dados</h1>
+    <form id="form-busca">
+      <input id="q" placeholder="termo" required />
+      <button>Buscar</button>
+    </form>
+    <pre id="out"></pre>
+  </main>
+  <script src="app.js" type="module"></script>
+</body>
 </html>
