@@ -1,20 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Demo API</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Protocolo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Busca de dados</h1>
-    <form id="form-busca">
-      <input id="q" placeholder="termo" required />
-      <button>Buscar</button>
-    </form>
-    <pre id="out"></pre>
-  </main>
-  <script src="app.js" type="module"></script>
+
+   <header class="header">
+  <div class="header-bar">
+    <!-- ESQUERDA: TJPA -->
+    <img
+      src="img/thumbnail_image.png"
+      alt="Poder Judiciário — Tribunal de Justiça do Estado do Pará"
+      class="logo tjpa-logo"
+      decoding="async"
+      fetchpriority="high"
+    >
+
+    <!-- CENTRO: Título -->
+    <div class="title-center">
+      <h1>DIVISÃO DE PROTOCOLO</h1>
+      <h2>"Gestão na Palma da Mão"</h2>
+    </div>
+
+    <!-- DIREITA: SEAD -->
+    <img
+      src="img/sead.png"
+      alt="SEAD — Secretaria de Administração"
+      class="logo sead-logo"
+      decoding="async"
+    >
+  </div>
+</header>
+
+    <main class="main-content">
+        <section class="intro-section">
+            <h2>Bem-vindo à Divisão de Protocolo</h2>
+<!--            <p>Nossa missão é garantir a excelência e transparência em todos os processos de aquisição, promovendo a eficiência e a economia para a nossa organização. Utilizamos tecnologia de ponta para otimizar cada etapa, desde a cotação de preços até a finalização da compra.</p>-->
+        </section>
+
+       <section class="services-section">
+    <h3>Nossos Serviços</h3>
+    <div class="services-grid">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZWVlYTU0ZTUtMjI3NS00ZjRmLWE1OWYtNDA3NGY0NmM1YjhkIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="service-card" Visite Homehost</a>
+            <h4>Serviço de Expedição e Correspondência - SOEXC</h4>
+          <p>Obtenha os painéis de gestão (Dashboards) da contratação anterior à junho de 2025, contratação de Cartas e da contratação de Encomendas.</p>
+        </a>
+        <div class="service-card">
+            <h4>Suprimentos - Transporte das Regionais</h4>
+          <p>Obtenha os painel de gestão (Dashboard) com dados estatísticos dos valores utilizados com o transporte de materiais pelos Correios das reginais Belém, Santarém e Marabá.</p>
+        </div>
+    </div>
+<p></p>
+    <div class="services-grid">
+        <a href="cotacao-rapida.html" class="service-card">
+            <h4>Serviço de Atendimento ao Público - SOATP</h4>
+            <p>Obtenha o painel (Dashboard) com dados estatísticos dos atendimentos ao público, de modo presencial ou por telefone.</p>
+        </a>
+        <div class="service-card">
+            <h4>Serviço de Protocolo - SOPRA</h4>
+            <p>Obtenha o painel (Dashboard) com dados estatísticos dos atendimentos ao público, de modo presencial ou por e-mail.</p>
+        </div>
+    </div>
+    </section>
+        </main>
+
+    <footer class="footer">
+        <p>© 2025 Divisão de Protocolo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
