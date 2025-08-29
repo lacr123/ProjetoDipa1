@@ -88,10 +88,6 @@ body {
 }
 
 .service-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    
     background-color: var(--light-gray);
     padding: 25px;
     border-radius: 8px;
@@ -1277,5 +1273,6 @@ body.modal-open { overflow: hidden; }
   min-width: 22ch;
   white-space: nowrap;   /* impede quebra do número */
 }
+
 
 
