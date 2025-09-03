@@ -1,96 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divisão de Protocolo</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divisão de Protocolo - TJPA</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header class="header">
-  <div class="header-bar">
-    <!-- ESQUERDA: TJPA -->
-    <img
-      src="img/thumbnail_image.png"
-      alt="Poder Judiciário — Tribunal de Justiça do Estado do Pará"
-      class="logo tjpa-logo"
-      decoding="async"
-      fetchpriority="high"
-    >
-
-    <!-- CENTRO: Título -->
-    <div class="title-center">
-      <h1>DIVISÃO DE PROTOCOLO</h1>
-      <h2>"Gestão na Palma da Mão"</h2>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header-left">
+      <img src="img/logo_tjpa_branco.png" alt="Logo TJPA" class="logo1">
     </div>
+    <div class="header-center">
+      <h1>DIVISÃO DE PROTOCOLO</h1>
+      <p>"Gestão na Palma da Mão"</p>
+    </div>
+    <div class="header-right">
+      <img src="img/sead.png" alt="Logo SEAD" class="logo">
+    </div>
+  </header>
 
-    <!-- DIREITA: SEAD -->
-    <img
-      src="img/sead.png"
-      alt="SEAD — Secretaria de Administração"
-      class="logo sead-logo"
-      decoding="async"
-    >
-  </div>
-</header>
+  <!-- Boas-vindas -->
+  <section class="welcome">
+    <h2>Bem-vindo à Divisão de Protocolo</h2>
+<!--    <p>Aqui você encontra informações, serviços e ferramentas que apoiam a gestão documental, expedição e atendimento do Tribunal de Justiça do Estado do Pará.</p>-->
+  </section>
 
-   <main class="main-content">
-       <section class="intro-section">
-         <h2>Bem-vindo à Divisão de Protocolo</h2>
-<!--            <p>Nossa missão é garantir a excelência e transparência em todos os processos de aquisição, promovendo a eficiência e a economia para a nossa organização. Utilizamos tecnologia de ponta para otimizar cada etapa, desde a cotação de preços até a finalização da compra.</p>-->
-       </section>
+  <!-- Serviços -->
+  <section class="services">
+    <h2>Nossos Serviços</h2>
+    <div class="cards-container">
 
-       <section class="services-section">
-           <h3>Nossos Serviços</h3>
-           <div class="services-grid">
-              <a href="https://app.powerbi.com/view?r=eyJrIjoiZWVlYTU0ZTUtMjI3NS00ZjRmLWE1OWYtNDA3NGY0NmM1YjhkIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="service-card">
-                  <h4>Serviço de Expedição e Correspondência - SOEXC</h4>
-                  <p>Obtenha os painéis de gestão (Dashboards) com os dados da contratação dos serviços postais anterior à junho de 2025, contratação dos serviços postais de Cartas e da contratação dos serviços postais de Encomendas.</p>
-              </a>
-           <div class="services-grid">
-               <a href="https://app.powerbi.com/view?r=eyJrIjoiZGNlNjRmODEtMjZjMS00ZjY1LTlkYzUtNDQ2YzY0ZWI5MTllIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="service-card">
-                   <h4>Suprimentos - Transporte das Regionais</h4>
-                   <p>Obtenha os painel de gestão (Dashboard) com dados estatísticos dos valores utilizados com o transporte de materiais pelos Correios das reginais Belém, Santarém e Marabá.</p>
-               </a>
-           </div>
-           </div>
-           <p></p>
-           <div class="services-grid">
-               <a href="https://app.powerbi.com/view?r=eyJrIjoiZDg0OWMzY2ItMDAxMy00MThiLTg3YTYtNmRiMDMyZjUzOTBmIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="service-card">
-                   <h4>Serviço de Atendimento ao Público - SOATP</h4>
-                   <p>Obtenha o painel (Dashboard) com dados estatísticos dos atendimentos ao público, de modo presencial ou por telefone.</p>
-               </a>
-           <div class="services-grid">
-               <a href="https://app.powerbi.com/view?r=eyJrIjoiYTI1YTg2MDAtMzJhYi00N2NlLWE5NzgtZGFmYWZjNmEyN2MyIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="service-card">
-                   <h4>Serviço de Protocolo - SOPRA</h4>
-                   <p>Obtenha o painel (Dashboard) com dados estatísticos dos atendimentos ao público, de modo presencial ou por e-mail.</p>
-               </a>
-           </div>
-           </div>
-       </section>
-    </main>
+      <!-- Card 1 -->
+      <div class="card">
+        <h3>Serviço de Expedição e Correspondência (SOEXC)</h3>
+		<p>Estatísticas de valores dos serviços postais prestados pelos Correios.</p>
+<!--		<p>Obtenha o painel de gestão (Dashboard) com os dados estatísticos dos serviços postais prestados pelos Correios.</p>-->
+<!--		<p>Estatísticas (Dashboard) com os dados dos serviços postais prestados pelos Correios, referente à contratação anterior à junho/2025 e, à contratação atual dos serviços postais de Cartas e de Encomendas.</p>-->
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZWVlYTU0ZTUtMjI3NS00ZjRmLWE1OWYtNDA3NGY0NmM1YjhkIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="btn">Acessar Dashboard</a>
+      </div>
 
-    <footer class="footer">
-        <p>© 2025 Divisão de Protocolo. Todos os direitos reservados.</p>
-    </footer>
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Suprimentos — Transporte das Regionais</h3>
+        <p>Estatísticas de valores utilizados com o transporte de materiais pelos Correios das reginais Belém, Santarém e Marabá.</p>
+<!--        <p>Obtenha os painel de gestão (Dashboard) com dados estatísticos dos valores utilizados com o transporte de materiais pelos Correios das reginais Belém, Santarém e Marabá.</p>-->
+    <!--    <p>Estatísticas de transporte de materiais pelos Correios em Belém, Santarém e Marabá.</p>-->
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZGNlNjRmODEtMjZjMS00ZjY1LTlkYzUtNDQ2YzY0ZWI5MTllIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="btn">Acessar Dashboard</a>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- Card 3 -->
+      <div class="card">
+        <h3>Serviço de Atendimento ao Público (SOATP)</h3>
+       <p>Estatísticas de atendimentos presenciais e por telefone.</p>
+<!--       <p>Dashboard com dados estatísticos de atendimentos presenciais e por telefone.</p>-->
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiZDg0OWMzY2ItMDAxMy00MThiLTg3YTYtNmRiMDMyZjUzOTBmIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="btn">Acessar Dashboard</a>
+      </div>
 
+      <!-- Card 4 -->
+      <div class="card">
+        <h3>Serviço de Protocolo (SOPRA)</h3>
+        <p>Estatísticas de atendimentos presenciais e por e-mails.</p>
+<!--        <p>Obtenha o painel (Dashboard) com dados estatísticos dos atendimentos ao público presenciais e por e-mail.</p>-->
+<!--        <p>Dashboard com dados estatísticos de atendimentos presenciais e por e-mail.</p>-->
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiYTI1YTg2MDAtMzJhYi00N2NlLWE5NzgtZGFmYWZjNmEyN2MyIiwidCI6IjVmNmZkMTFlLWNkZjUtNDVhNS05MzM4LWI1MDFkY2VmZWFiNSJ9" target="_blank" class="btn">Acessar Dashboard</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Divisão de Protocolo. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
