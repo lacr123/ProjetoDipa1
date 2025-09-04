@@ -25,11 +25,11 @@ body {
 }
 
 .header .logo1 {
-  max-height: 90px;
+  max-height: 110px;
 }
 
 .header .logo {
-  max-height: 70px;
+  max-height: 40px;
 }
 
 .header-center {
@@ -119,6 +119,7 @@ body {
   margin-top: 50px;
 
 }
+
 
 
 
