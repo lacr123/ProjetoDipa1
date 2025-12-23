@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Envio de Currículo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #005a9c;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00457a;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Envio de Currículo para Análise</h1>
+
+  <form id="formTJPA" enctype="multipart/form-data">
+    <label for="nomeCompleto">Nome completo</label>
+    <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="curriculo">Currículo (PDF)</label>
+    <input
+      type="file"
+      id="curriculo"
+      name="curriculo"
+      accept="application/pdf"
+      required
+    >
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('formTJPA').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = this;
+    const formData = new FormData(form);
+
+    const file = formData.get('curriculo');
+    if (file && file.type !== 'application/pdf') {
+      alert('Por favor, envie apenas arquivos no formato PDF.');
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        'http://localhost:5678/webhook/f61ba8cf-b8d2-4308-8fa2-c59a24f677e0',
+//        'http://localhost:5678/webhook-test/f61ba8cf-b8d2-4308-8fa2-c59a24f677e0',
+
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+
+      if (response.ok) {
+        alert('Currículo enviado com sucesso.');
+        form.reset();
+      } else {
+        alert('Erro ao enviar o currículo.');
+      }
+    } catch (err) {
+      alert('Falha de comunicação com o servidor.');
+    }
+  });
+</script>
+
+</body>
+</html>
